@@ -4,7 +4,9 @@
     <!-- Botón para incrementar el contador -->
     <button @click="incrementCounter">Incrementar</button>
     <!-- Mostrar el valor del contador -->
-    <p>Contador: {{ counter }}</p>
+    <p :class="{ 'red-text': counter < 0, 'green-text': counter > 0 }">
+      Contador: {{ counter }}
+    </p>
     <!-- Botón para decrementar el contador -->
     <button @click="decrementCounter">Decrementar</button>
   </div>
@@ -50,5 +52,13 @@ button {
   margin: 5px;
   padding: 10px 20px;
   font-size: 16px;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
 }
 </style>
