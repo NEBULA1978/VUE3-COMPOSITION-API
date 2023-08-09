@@ -12,8 +12,10 @@ const arrayFrutas = ['🍏', '🍇', '🍓', '🥝', '🍒'];
 <template>
   <div class="container">
     <h1>Hola {{ name.toLocaleUpperCase() }}</h1>
-    <button v-on:click="handleClick('Texto1')">Activame 1</button>
-    <button @click="handleClick('Texto2')">Activame 2</button>
+    <!-- Clics del raton -->
+    <button v-on:click.right.prevent="handleClick('Texto Right')">Activame right</button>
+    <button v-on:click="handleClick('Texto Left')">Activame left</button>
+    <button @click.middle="handleClick('Texto Middle')">Activame middle</button>
   </div>
 </template>
 
