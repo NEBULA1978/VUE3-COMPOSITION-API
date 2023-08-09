@@ -38,6 +38,13 @@ const arrayFrutas = [
 
 console.log(arrayFrutas);
 
+const objetoFruta = {
+  id: 1,
+  nombre: 'Pera',
+  precio: 0.7,
+  descripcion: 'Una fruta jugosa y dulce.',
+};
+
 </script>
 
 <template>
@@ -72,15 +79,13 @@ console.log(arrayFrutas);
     <li>{{ arryFrutas[1] }}</li>
     <li>{{ arryFrutas[2] }}</li>
   </ul>
-<!-- v-for igual que arriba pero mejor -->
-<ul>
-  <li v-for="(fruta,index) in arryFrutas"
-  :key="index"
-  >{{ index }} - {{ fruta }}
-  </li>
-</ul>
-<!-- v-for igual que arriba pero mejor -->
-<!-- <ul>
+  <!-- v-for igual que arriba pero mejor -->
+  <ul>
+    <li v-for="(fruta, index) in arryFrutas" :key="index">{{ index }} - {{ fruta }}
+    </li>
+  </ul>
+  <!-- v-for igual que arriba pero mejor -->
+  <!-- <ul>
   <li v-for="fruta in arrayFrutas"
   :key="fruta.name"
   >{{ fruta.name }} - {{ fruta.price }} - {{ fruta.descripcion }}
@@ -92,7 +97,11 @@ console.log(arrayFrutas);
     </li>
   </ul>
 
-
+  <ul>
+    <li v-for="(valor, propiedad, index) in objetoFruta" :key="valor">
+      {{ index }} - {{ propiedad }}: {{ valor }}
+    </li>
+  </ul>
 </template>
 
 <style scoped>
