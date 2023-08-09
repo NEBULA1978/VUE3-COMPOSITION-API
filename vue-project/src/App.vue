@@ -44,6 +44,26 @@ const objetoFruta = {
   precio: 0.7,
   descripcion: 'Una fruta jugosa y dulce.',
 };
+const objetoFruta2 = [
+  {
+    id: 1,
+    nombre: 'Pera',
+    precio: 0.7,
+    descripcion: 'Una fruta jugosa y dulce.',
+  },
+  {
+    id: 2,
+    nombre: 'Banana',
+    precio: 0.6,
+    descripcion: 'Una fruta amarilla y energética.',
+  },
+  {
+    id: 3,
+    nombre: 'Sandía',
+    precio: 1.8,
+    descripcion: 'Una fruta jugosa perfecta para el verano.',
+  },
+];
 
 </script>
 
@@ -102,6 +122,16 @@ const objetoFruta = {
       {{ index }} - {{ propiedad }}: {{ valor }}
     </li>
   </ul>
+
+    <div>
+      <ul>
+        <template v-for="item in arrayFrutas" :key="item.name">
+          <li v-if="item.precio > 0">
+            {{ item.name }} - {{ item.precio }}
+          </li>
+        </template>
+      </ul>
+    </div>
 </template>
 
 <style scoped>
