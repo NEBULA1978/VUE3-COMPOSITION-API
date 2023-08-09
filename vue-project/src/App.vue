@@ -3,8 +3,8 @@
 const name = 'vue dinámico'
 const styleColor = "color:blue"
 const arrayColores = ["blue","red","peru"]
-const activo = true
-// const activo = false
+// const activo = true
+const activo = false
 // const activo = null
 // const activo = false
 </script>
@@ -30,6 +30,7 @@ const activo = true
 <p v-else-if="activo === false">Estoy inactivo</p>
 <h2 v-else>Estoy indeciso</h2>
 
+<h2 v-show="activo">Estoy activo v-show</h2>
 
 </template>
 
