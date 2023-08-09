@@ -5,7 +5,7 @@ const styleColor = "color:blue"
 </script>
 
 <template>
-<h1>Hola {{ name }}</h1>
+<h1>Hola {{ name.toLocaleUpperCase() }}</h1>
 
 <h2 v-bind:style="styleColor">Soy AZUL</h2>
 </template>
