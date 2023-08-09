@@ -8,35 +8,6 @@ const activo = true
 // const activo = null
 // const activo = false
 const arryFrutas = ['🍏', '🍇', '🍓', '🥝', '🍒'];
-const arrayFrutas = [
-  {
-    nombre: 'Manzana',
-    precio: 0.5,
-    descripcion: 'Una fruta crujiente y refrescante.',
-  },
-  {
-    nombre: 'Uva',
-    precio: 1.2,
-    descripcion: 'Pequeñas y jugosas uvas en racimos.',
-  },
-  {
-    nombre: 'Fresa',
-    precio: 0.8,
-    descripcion: 'Dulces y sabrosas fresas rojas.',
-  },
-  {
-    nombre: 'Kiwi',
-    precio: 1.0,
-    descripcion: 'Fruta exótica con interior verde y sabroso.',
-  },
-  {
-    nombre: 'Cereza',
-    precio: 1.5,
-    descripcion: 'Cerezas pequeñas y jugosas de color rojo intenso.',
-  },
-];
-
-console.log(arrayFrutas);
 
 </script>
 
@@ -77,13 +48,6 @@ console.log(arrayFrutas);
   <li v-for="(fruta,index) in arryFrutas"
   :key="index"
   >{{ index }} - {{ fruta }}
-  </li>
-</ul>
-<!-- v-for igual que arriba pero mejor -->
-<ul>
-  <li v-for="fruta in arrayFrutas"
-  :key="fruta.name"
-  >{{ fruta.name }} - {{ fruta.price }} - {{ fruta.descripcion }}
   </li>
 </ul>
 
