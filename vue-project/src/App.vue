@@ -80,12 +80,17 @@ console.log(arrayFrutas);
   </li>
 </ul>
 <!-- v-for igual que arriba pero mejor -->
-<ul>
+<!-- <ul>
   <li v-for="fruta in arrayFrutas"
   :key="fruta.name"
   >{{ fruta.name }} - {{ fruta.price }} - {{ fruta.descripcion }}
   </li>
-</ul>
+</ul> -->
+  <ul>
+    <li v-for="fruta in arrayFrutas" :key="fruta.nombre">
+      {{ fruta.nombre }} - {{ fruta.precio }} - {{ fruta.descripcion }}
+    </li>
+  </ul>
 
 
 </template>
