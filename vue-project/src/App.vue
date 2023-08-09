@@ -3,8 +3,8 @@
 const name = 'vue dinámico'
 const styleColor = "color:blue"
 const arrayColores = ["blue","red","peru"]
-const active = true
-// const active = false
+const activo = true
+// const activo = false
 </script>
 
 <template>
@@ -12,12 +12,19 @@ const active = true
 
 <h2 v-bind:style="styleColor">Soy AZUL</h2>
 <!-- Cuando cambia el indice cambia el color -->
-<h2 v-bind:style="`color: ${arrayColores[2]}`">Soy Peru </h2>
+<!-- <h2 v-bind:style="`color: ${arrayColores[2]}`">Soy Peru </h2> -->
+<h2 :style="`color: ${arrayColores[2]}`">Soy Peru </h2>
 
 <h2>
-  {{ active ? "Estoy activo" : "Estoy Inactivo" }}
+  <!-- Operador ternario -->
+  {{ activo ? "Estoy activo" : "Estoy Inactivo" }}
 </h2>
-<h3>{{ arrayColores }}</h3>
+
+<h2>{{ arrayColores }}</h2>
+
+<p v:if="activo">Estoy activo</p>
+<h2 v:else="!activo">Estoy inactivo</h2>
+
 </template>
 
 <style scoped>
