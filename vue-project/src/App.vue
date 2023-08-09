@@ -7,7 +7,7 @@ const styleColor = "color:blue"
 <template>
 <h1>Hola {{ name }}</h1>
 
-<h2 style="color:blue">Soy AZUL</h2>
+<h2 v-bind:style="styleColor">Soy AZUL</h2>
 </template>
 
 <style scoped>
