@@ -3,10 +3,10 @@
     <h1>Hola {{ name.toLocaleUpperCase() }}</h1>
     <!-- Botón para incrementar el contador -->
     <button @click="incrementCounter">Incrementar</button>
-    <!-- Mostrar el valor del contador -->
-    <p :class="{ 'red-text': counter < 0, 'green-text': counter > 0 }">
+    <!-- Mostrar el valor del contador con color condicional -->
+    <h2 :class="getCounterClass()">
       Contador: {{ counter }}
-    </p>
+    </h2>
     <!-- Botón para decrementar el contador -->
     <button @click="decrementCounter">Decrementar</button>
   </div>
@@ -28,6 +28,17 @@ const incrementCounter = () => {
 // Función para decrementar el contador
 const decrementCounter = () => {
   counter.value--;
+};
+
+// Función para obtener la clase del contador
+const getCounterClass = () => {
+  if (counter.value === 0) {
+    return 'cero';
+  } else if (counter.value > 0) {
+    return 'positivo';
+  } else {
+    return 'negativo';
+  }
 };
 </script>
 
@@ -54,11 +65,15 @@ button {
   font-size: 16px;
 }
 
-.red-text {
+.positivo {
+  color: green;
+}
+
+.negativo {
   color: red;
 }
 
-.green-text {
-  color: green;
+.cero {
+  color: white;
 }
 </style>
